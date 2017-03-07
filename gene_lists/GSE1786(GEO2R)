@@ -1,0 +1,110 @@
+
+ID	adj.P.Val	P.Value	t	B	logFC	Gene.symbol	Gene.title
+222043_at	0.0395	0.00000177	-8.26	3.2087	-1.579	CLU	clusterin
+221328_at	0.2035	0.00001826	-6.61	1.9043	-1.401	CLDN17	claudin 17
+206303_s_at	0.2704	0.00004317	6.06	1.3708	2.122	NUDT4P1///NUDT4P2///NUDT4	nudix hydrolase 4 pseudogene 1///nudix hydrolase 4 pseudogene 2///nudix hydrolase 4
+219409_at	0.2704	0.00004854	5.99	1.296	1.93	SNIP1	Smad nuclear interacting protein 1
+205371_s_at	0.3563	0.00007995	5.68	0.9724	2.978	DBT	dihydrolipoamide branched chain transacylase E2
+203181_x_at	0.3583	0.00009647	-5.57	0.8482	-1.803	SRPK2	SRSF protein kinase 2
+207781_s_at	0.3675	0.000147	5.32	0.5658	3.017	ZNF711	zinc finger protein 711
+215433_at	0.3675	0.00015691	-5.28	0.5215	-1.41	DPY19L1	dpy-19 like 1
+208043_at	0.3675	0.00018531	-5.19	0.4079	-1.033		
+204712_at	0.3675	0.00024487	-5.02	0.2158	-2.222	WIF1	WNT inhibitory factor 1
+205408_at	0.3675	0.00026812	4.97	0.1527	1.755	MLLT10	myeloid/lymphoid or mixed-lineage leukemia; translocated to, 10
+211518_s_at	0.3675	0.00027506	-4.96	0.135	-1.964	BMP4	bone morphogenetic protein 4
+207730_x_at	0.3675	0.0002753	-4.96	0.1343	-0.852		
+216530_at	0.3675	0.00027729	4.95	0.1293	1.397		
+206975_at	0.3675	0.00027817	-4.95	0.1271	-1.45	LTA	lymphotoxin alpha
+212418_at	0.3675	0.00028026	4.95	0.1219	1.402	ELF1	E74 like ETS transcription factor 1
+200653_s_at	0.3675	0.00029584	-4.92	0.0841	-1.146	CALM3///CALM2///CALM1	calmodulin 3///calmodulin 2///calmodulin 1
+216639_at	0.3675	0.00029684	4.91	0.0817	2.029	SRPX2	sushi repeat containing protein, X-linked 2
+212979_s_at	0.4104	0.0003593	4.81	-0.0524	3.105	LOC100294033///TCAF1	protein FAM115A-like///TRPM8 channel associated factor 1
+203559_s_at	0.4104	0.00038787	-4.76	-0.1064	-1.903	AOC1	amine oxidase, copper containing 1
+216726_at	0.4104	0.00041733	4.72	-0.1583	0.971	VENTXP1	VENT homeobox pseudogene 1
+200628_s_at	0.4104	0.00043194	4.7	-0.1827	1.22	WARS	tryptophanyl-tRNA synthetase
+222348_at	0.4104	0.00044439	-4.69	-0.2029	-1.764	MAST4	microtubule associated serine/threonine kinase family member 4
+214044_at	0.4104	0.00049032	-4.63	-0.273	-1.77	RYR2	ryanodine receptor 2
+220035_at	0.4104	0.0004984	-4.62	-0.2847	-1.568	NUP210	nucleoporin 210
+222358_x_at	0.4104	0.00050207	-4.62	-0.2899	-1.513		
+204363_at	0.4104	0.00055461	-4.56	-0.3612	-1.831	F3	coagulation factor III, tissue factor
+220773_s_at	0.4104	0.00058998	4.53	-0.4056	1.125	GPHN	gephyrin
+209376_x_at	0.4104	0.0006187	-4.5	-0.4398	-1.507	SCAF11	SR-related CTD associated factor 11
+214722_at	0.4104	0.00061986	-4.5	-0.4411	-1.164	NOTCH2NL	notch 2 N-terminal like
+207453_s_at	0.4104	0.00062191	4.5	-0.4435	1.754	DNAJB5	DnaJ heat shock protein family (Hsp40) member B5
+220184_at	0.4104	0.00062616	-4.5	-0.4484	-2.532	NANOG	Nanog homeobox
+219936_s_at	0.4104	0.0006415	4.48	-0.4658	2.136	GPR87	G protein-coupled receptor 87
+215575_at	0.4104	0.00065969	-4.47	-0.486	-0.912	PDE4DIP	phosphodiesterase 4D interacting protein
+221795_at	0.4104	0.00066461	-4.46	-0.4914	-1.795	NTRK2	neurotrophic receptor tyrosine kinase 2
+210811_s_at	0.4104	0.00069967	-4.44	-0.5285	-1.254	DDX49	DEAD-box helicase 49
+221748_s_at	0.4104	0.00073011	-4.41	-0.5594	-0.932	TNS1	tensin 1
+214540_at	0.4104	0.00073884	4.41	-0.568	1.436	HIST1H2BO	histone cluster 1, H2bo
+206792_x_at	0.4104	0.00073913	-4.41	-0.5683	-0.806	LOC729966///PDE4C	uncharacterized LOC729966///phosphodiesterase 4C
+214770_at	0.4104	0.00077047	-4.38	-0.5984	-2.052	MSR1	macrophage scavenger receptor 1
+211655_at	0.4104	0.00077774	4.38	-0.6052	1.994	IGLC1	immunoglobulin lambda constant 1
+33148_at	0.4104	0.0007888	-4.37	-0.6155	-1.577	ZFR	zinc finger RNA binding protein
+205134_s_at	0.4104	0.00079672	-4.36	-0.6227	-1.115	NUFIP1	NUFIP1, FMR1 interacting protein 1
+203394_s_at	0.4104	0.00082637	-4.34	-0.6493	-1.461	HES1	hes family bHLH transcription factor 1
+221705_s_at	0.4104	0.00082886	-4.34	-0.6515	-1.251	SIKE1	suppressor of IKBKE 1
+214820_at	0.4303	0.00094079	4.27	-0.7439	1.926	BRWD1	bromodomain and WD repeat domain containing 1
+204686_at	0.4303	0.00094112	-4.27	-0.7442	-0.826	IRS1	insulin receptor substrate 1
+209698_at	0.4303	0.00095442	-4.27	-0.7544	-1.064	CCHCR1	coiled-coil alpha-helical rod protein 1
+211090_s_at	0.4303	0.00097259	4.26	-0.7682	2.502	PRPF4B	pre-mRNA processing factor 4B
+203334_at	0.4303	0.00097928	-4.25	-0.7732	-1.529	DHX8	DEAH-box helicase 8
+203766_s_at	0.4303	0.00105476	-4.21	-0.8277	-1.335	LMOD1	leiomodin 1
+211132_at	0.4303	0.00105697	-4.21	-0.8292	-1.922	INTS3	integrator complex subunit 3
+210399_x_at	0.4303	0.00106923	-4.2	-0.8377	-1.162	FUT6	fucosyltransferase 6
+215442_s_at	0.4303	0.00107332	-4.2	-0.8405	-1.884	TSHR	thyroid stimulating hormone receptor
+204835_at	0.4303	0.00111607	4.18	-0.8692	0.929	POLA1	DNA polymerase alpha 1, catalytic subunit
+220278_at	0.4303	0.00113227	-4.17	-0.8797	-2.47	KDM4D	lysine demethylase 4D
+218983_at	0.4303	0.00114815	-4.17	-0.89	-1.03	C1RL	complement C1r subcomponent like
+207590_s_at	0.4303	0.00116137	4.16	-0.8984	1.823	CENPI	centromere protein I
+213068_at	0.4303	0.00116304	-4.16	-0.8995	-0.759	DPT	dermatopontin
+211386_at	0.4303	0.0012067	-4.14	-0.9266	-1.445	MGC12488	uncharacterized protein MGC12488
+202844_s_at	0.4303	0.00120932	-4.14	-0.9282	-2.042	RALBP1	ralA binding protein 1
+212095_s_at	0.4303	0.00122536	-4.13	-0.9379	-1.67	MTUS1	microtubule associated tumor suppressor 1
+203597_s_at	0.4303	0.0012351	-4.13	-0.9438	-0.977	WBP4	WW domain binding protein 4
+219002_at	0.4303	0.001244	4.12	-0.9491	1.006	FASTKD1	FAST kinase domains 1
+216771_at	0.4303	0.00125609	-4.12	-0.9562	-1.486	LOC101926997	uncharacterized LOC101926997
+205345_at	0.4303	0.00128543	-4.1	-0.9732	-1.807	BARD1	BRCA1 associated RING domain 1
+213619_at	0.4303	0.00132226	-4.09	-0.9941	-1.463	HNRNPH1	heterogeneous nuclear ribonucleoprotein H1 (H)
+209164_s_at	0.4303	0.0013469	4.08	-1.0078	1.362	CYB561	cytochrome b561
+208253_at	0.4303	0.00136366	-4.07	-1.0169	-2.132	SIGLEC8	sialic acid binding Ig like lectin 8
+204894_s_at	0.4303	0.00137622	-4.07	-1.0237	-0.895	AOC3	amine oxidase, copper containing 3
+219316_s_at	0.4303	0.00138447	-4.06	-1.0281	-1.44	FLVCR2	feline leukemia virus subgroup C cellular receptor family member 2
+221920_s_at	0.4303	0.00139908	4.06	-1.0359	0.966	SLC25A37	solute carrier family 25 member 37
+200669_s_at	0.4303	0.00140969	4.05	-1.0415	0.748	UBE2D3	ubiquitin conjugating enzyme E2 D3
+208792_s_at	0.4406	0.00146323	-4.03	-1.0691	-1.266	CLU	clusterin
+208229_at	0.444	0.0014943	-4.02	-1.0847	-2.018	FGFR2	fibroblast growth factor receptor 2
+208895_s_at	0.4487	0.00154317	-4.01	-1.1086	-1.087	DDX18	DEAD-box helicase 18
+204409_s_at	0.4487	0.0015873	-3.99	-1.1295	-0.731	EIF1AY	eukaryotic translation initiation factor 1A, Y-linked
+212057_at	0.4487	0.00159918	3.99	-1.1351	0.824	GSE1	Gse1 coiled-coil protein
+216952_s_at	0.4487	0.00163976	3.97	-1.1537	1.645	LMNB2	lamin B2
+216892_at	0.4487	0.00164209	3.97	-1.1547	1.552	IGHG1	immunoglobulin heavy constant gamma 1 (G1m marker)
+205492_s_at	0.4487	0.00164755	-3.97	-1.1572	-1.451	DPYSL4	dihydropyrimidinase like 4
+206124_s_at	0.4487	0.00165122	3.97	-1.1589	1.478	LLGL1	LLGL1, scribble cell polarity complex component
+204840_s_at	0.449	0.0017162	-3.95	-1.1876	-2.107	EEA1	early endosome antigen 1
+202456_s_at	0.449	0.00173488	3.94	-1.1957	1.233	ZER1	zyg-11 related cell cycle regulator
+217667_at	0.449	0.00173865	-3.94	-1.1973	-1.81	SEC14L1P1	SEC14 like 1 pseudogene 1
+219935_at	0.449	0.00176734	-3.93	-1.2095	-0.777	ADAMTS5	ADAM metallopeptidase with thrombospondin type 1 motif 5
+221127_s_at	0.449	0.00177988	-3.93	-1.2147	-1.613	DKK3	dickkopf WNT signaling pathway inhibitor 3
+221988_at	0.449	0.00179041	-3.93	-1.2191	-0.709	SMIM7	small integral membrane protein 7
+210747_at	0.449	0.00179317	-3.93	-1.2203	-1.661	HLA-DQB1	major histocompatibility complex, class II, DQ beta 1
+208075_s_at	0.4582	0.00185053	-3.91	-1.2438	-1.41	CCL7	C-C motif chemokine ligand 7
+219252_s_at	0.4854	0.00199531	3.87	-1.3001	0.908	GEMIN8	gem nuclear organelle associated protein 8
+206173_x_at	0.4854	0.00200398	3.87	-1.3033	1.518	GABPB1	GA binding protein transcription factor beta subunit 1
+210153_s_at	0.4932	0.00207577	3.85	-1.3297	1.03	ME2	malic enzyme 2
+213663_s_at	0.4932	0.00212226	-3.84	-1.3462	-2.398	FAM134B	family with sequence similarity 134 member B
+202092_s_at	0.4932	0.00214102	3.83	-1.3528	0.783	ARL2BP	ADP ribosylation factor like GTPase 2 binding protein
+201490_s_at	0.4932	0.00214429	3.83	-1.354	1.521	PPIF	peptidylprolyl isomerase F
+205641_s_at	0.4932	0.00215764	-3.83	-1.3586	-1.866	TRADD	TNFRSF1A associated via death domain
+213162_at	0.4932	0.00216918	3.82	-1.3626	1.026	DYNC1LI2	dynein cytoplasmic 1 light intermediate chain 2
+213649_at	0.4969	0.00222722	3.81	-1.3824	1.625	SRSF7	serine and arginine rich splicing factor 7
+221449_s_at	0.4969	0.00223872	3.81	-1.3863	0.902	ITFG1	integrin alpha FG-GAP repeat containing 1
+201196_s_at	0.4969	0.00229818	3.79	-1.406	0.86	AMD1	adenosylmethionine decarboxylase 1
+202645_s_at	0.4969	0.00229866	3.79	-1.4061	0.814	MEN1	menin 1
+207722_s_at	0.4969	0.00234303	3.78	-1.4205	0.776	BTBD2	BTB domain containing 2
+202222_s_at	0.4969	0.00234999	-3.78	-1.4227	-0.713	DES	desmin
+218647_s_at	0.4969	0.00241371	-3.77	-1.4428	-0.732	YRDC	yrdC N6-threonylcarbamoyltransferase domain containing
+208350_at	0.4969	0.00243495	3.76	-1.4494	1.668	CSN1S1	casein alpha s1
+214324_at	0.4969	0.00245978	-3.76	-1.457	-1.135	GP2	glycoprotein 2
+204167_at	0.4969	0.00246128	3.76	-1.4575	1.184	BTD	biotinidase
