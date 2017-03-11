@@ -75,42 +75,21 @@ geneLists <- list(arvc, brugada, cardiomyopathy, cpvt, dcm, hcm, lds, lqts, lvnc
 #create the names for this genelist (make sure they match! EVERYTHING IS RUINED IF THEY DONT MATCH)
 names(geneLists) <- c("arvc", "brugada", "cardiomyopathy", "cpvt", "dcm", "hcm", "lds", "lqts", "lvnc", "noonan", "clinvar", "elite")
 
-#gets the intersection of two gene lists, gl1, and gl2
-#because it uses grepl, you must put the shorter gene name first and the longer gene name last
-get_intersection <- function(gl1, gl2){
-  tfVec <- rep(0, length(gl1))
-  for(i in 1: length(gl1)){
-    include <- FALSE
-    gl1Name <- gl1[i]
-    v <- grepl(gl1Name, gl2)
-    if(TRUE %in% v){
-      include <- TRUE
-    }
-    else{
-      #do nothing
-    }
-    tfVec[i] = include
-  }
-  tfVec <- as.logical(tfVec)
-  #we return the original list gl1, but subsetted only for intersections
-  #there's a bit of rigamarole with turning things into an out of dataframes here
-  return(as.data.frame(gl1[tfVec]))
-}
 
 #given a primary gene list, interests it with each list on the list of lists and writes a file with the name associated with the file enumerated in the list of lists
 intersect_and_write_lists <- function(primaryGeneList, listOfLists){
  for(i in 1:length(listOfLists)){
    name <- names(listOfLists)[i]
-   curList <- get(name, listOfLists)
+   curList <- as.matrix(get(name, listOfLists))
    #we pass primary gene list second because its gene names may be gross
-   l <- get_intersection(curList, primaryGeneList)
+   l <- intersect(curList, primaryGeneList)
    #ALERT! you should change this path to where you want the files to be written
    writePath <- paste("output_data/intersection_with_", name, ".txt", sep = "")
    write(as.matrix(l), writePath)
  } 
 }
 
-intersect_and_write_lists(gene_lists$GSE68072.txt, geneLists)
+intersect_and_write_lists(final_gene_list, geneLists)
 
 
 
