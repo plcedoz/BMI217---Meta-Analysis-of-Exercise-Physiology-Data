@@ -1,5 +1,5 @@
 #ALERT! change this!! the path to the data on your local system
-dataPath <- "/Users/noahfriedman/Desktop/bmi217ProjectData/"
+dataPath <- "/Data/"
 
 #paths to gene lists
 #all gene lists are in list format with one gene per line
