@@ -1,5 +1,6 @@
 #ALERT! change this!! the path to the data on your local system
-dataPath <- "/Users/noahfriedman/Desktop/bmi217ProjectData/"
+rm(list = ls())
+dataPath <- "Data/"
 
 #paths to gene lists
 #all gene lists are in list format with one gene per line
@@ -104,12 +105,12 @@ intersect_and_write_lists <- function(primaryGeneList, listOfLists){
    #we pass primary gene list second because its gene names may be gross
    l <- get_intersection(curList, primaryGeneList)
    #ALERT! you should change this path to where you want the files to be written
-   writePath <- paste("/Users/noahfriedman/Desktop/BMI217Project/INTERSECTIONS_WITH", name, ".txt", sep = "")
+   writePath <- paste("output_data/intersection_with_", name, ".txt", sep = "")
    write(as.matrix(l), writePath)
  } 
 }
 
-intersect_and_write_lists(geneList2$Gene.symbol, geneLists)
+intersect_and_write_lists(gene_lists$GSE68072.txt, geneLists)
 
 
 
