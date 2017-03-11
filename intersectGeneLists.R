@@ -1,35 +1,44 @@
+#ALERT! change this!! the path to the data on your local system
+dataPath <- "/Users/noahfriedman/Desktop/bmi217ProjectData/"
+
 #paths to gene lists
 #all gene lists are in list format with one gene per line
 #cardiome: genes relevant for cardiac phenotypes
-cardiomePath <- "/Users/noahfriedman/Desktop/BMI217Project/data/cardiome/cardiome_genes_list.txt.updated"
+cardiomePath <- paste(dataPath, 'cardiome_genes_list.txt.updated', sep = '')
 #sarcomere: sarcomeric related genes
-sarcomerePath <- "/Users/noahfriedman/Desktop/BMI217Project/data/genesets/sarcomericGenes.txt"
+sarcomerePath <- paste(dataPath, "sarcomericGenes.txt", sep = '')
+#clinvar: genes associated with disease pathogenicity
+clinvarPath <- paste(dataPath, "clinvar_gene.txt", sep = '')
+#elite lof : loss of function genes identified as significant in the elite study
+elitePath <- paste(dataPath, "elite_lof_genes.txt", sep = '')
 
 #GENE dx data-->cardiac disease associated genes
 #arvc (arrythmogenic right ventricular cardiomyopathy)
-arvcPath <- "/Users/noahfriedman/Desktop/BMI217Project/data/genesets/genedx/arvc.txt"
+arvcPath <- paste(dataPath, "genedx/arvc.txt", sep = '')
 #brugada (syndrome associated with sudden death related to cardiac phenotypes)
-brugadaPath <- "/Users/noahfriedman/Desktop/BMI217Project/data/genesets/genedx/brugada.txt"
+brugadaPath <- paste(dataPath, "genedx/brugada.txt", sep = '')
 #cardioFacioCutaneous (a disorder assocaited with weird things in the heart and skin)
-cardioFacioCutaneousPath <- "/Users/noahfriedman/Desktop/BMI217Project/data/genesets/genedx/cardio-facio-cutaneous.txt"
+cardioFacioCutaneousPath <- paste(dataPath, "genedx/cardio-facio-cutaneous.txt", sep = '')
 #cardiomyopathy genes
-cardioMyopathyPath <- "/Users/noahfriedman/Desktop/BMI217Project/data/genesets/genedx/comprehensive_cardiomyopathy.txt"
+cardioMyopathyPath <- paste(dataPath, "genedx/comprehensive_cardiomyopathy.txt", sep = '')
 #cpvt: catecholaminergic polymorphic ventricular tachycardia
-cpvtPath <- "/Users/noahfriedman/Desktop/BMI217Project/data/genesets/genedx/cpvt.txt"
+cpvtPath <- paste(dataPath, "genedx/cpvt.txt", sep = '')
 #dcm: dialted cardiomyopathy
-dcmPath <- "/Users/noahfriedman/Desktop/BMI217Project/data/genesets/genedx/dcm.txt"
+dcmPath <- paste(dataPath, "genedx/dcm.txt", sep = '')
 #hcm: hypertrophies cardiomyopathy
-hcmPath <- "/Users/noahfriedman/Desktop/BMI217Project/data/genesets/genedx/hcm.txt"
+hcmPath <- paste(dataPath, "genedx/hcm.txt", sep = '')
 #lds: loeys-dietz syndrome (cardiac tissue syndrome)
-ldsPath <- "/Users/noahfriedman/Desktop/BMI217Project/data/genesets/genedx/lds.txt"
+ldsPath <- paste(dataPath, "genedx/lds.txt", sep = '')
 #lqts: long qt syndrome
-lqtsPath <- "/Users/noahfriedman/Desktop/BMI217Project/data/genesets/genedx/lqts.txt"
+lqtsPath <- paste(dataPath, "genedx/lqts.txt", sep = '')
 #lvnc: left non-ventricular contract cardiomyopathy
-lvncPath <- "/Users/noahfriedman/Desktop/BMI217Project/data/genesets/genedx/lvnc.txt"
+lvncPath <- paste(dataPath, "genedx/lvnc.txt", sep = '')
 #noonan syndrome 
-noonanPath <- "/Users/noahfriedman/Desktop/BMI217Project/data/genesets/genedx/noonan.txt"
+noonanPath <- paste(dataPath, "genedx/noonan.txt", sep = '')
 
 #read in our gene lists (note they are in heterogeneous formats so they need to be read in different formats
+
+#bad heart phenotype related genes
 arvc <- read.csv(arvcPath, sep = ',', header = FALSE)
 brugada <- read.csv(brugadaPath, sep = ',', header = FALSE)
 cardiomyopathy <- as.data.frame(t(read.csv(cardioMyopathyPath, sep = '\n', header = FALSE)))
@@ -45,18 +54,25 @@ lds <- read.csv(ldsPath, sep = ',', header = FALSE)
 lqts <- as.data.frame(t(read.csv(lqtsPath, sep = '\n', header = FALSE)))
 lvnc <- read.csv(lvncPath, sep = ',', header = FALSE)
 #again apply the correction for string matching
-#TEST
-lvnc[2] = "BUTTFACE"
+lvnc[2] = "ACTC"
 lvnc[27] = "LDB3"
 noonan <- read.csv(noonanPath, sep = ',', header = FALSE)
 #again apply the correction for string matching
 noonan[2] = "ACTC"
 noonan[27] = "LDB3"
 
+#CLINVar 
+clinvar <- read.csv(clinvarPath, sep = '\t', header = TRUE)
+clinvar <- clinvar$gene
+clinvar <- as.character(clinvar)
+
+#ELITE LOF
+elite <- read.csv(elitePath, sep = '\t', header = FALSE)
+
 #create a matrix of genelists
-geneLists <- list(arvc, brugada, cardiomyopathy, cpvt, dcm, hcm, lds, lqts, lvnc, noonan)    
+geneLists <- list(arvc, brugada, cardiomyopathy, cpvt, dcm, hcm, lds, lqts, lvnc, noonan, clinvar, elite)    
 #create the names for this genelist (make sure they match! EVERYTHING IS RUINED IF THEY DONT MATCH)
-names(geneLists) <- c("arvc", "brugada", "cardiomyopathy", "cpvt", "dcm", "hcm", "lds", "lqts", "lvnc", "noonan")
+names(geneLists) <- c("arvc", "brugada", "cardiomyopathy", "cpvt", "dcm", "hcm", "lds", "lqts", "lvnc", "noonan", "clinvar", "elite")
 
 #gets the intersection of two gene lists, gl1, and gl2
 #because it uses grepl, you must put the shorter gene name first and the longer gene name last
@@ -70,8 +86,7 @@ get_intersection <- function(gl1, gl2){
       include <- TRUE
     }
     else{
-      print("ochen ploxa")
-      print(gl1Name)
+      #do nothing
     }
     tfVec[i] = include
   }
@@ -88,12 +103,14 @@ intersect_and_write_lists <- function(primaryGeneList, listOfLists){
    curList <- get(name, listOfLists)
    #we pass primary gene list second because its gene names may be gross
    l <- get_intersection(curList, primaryGeneList)
+   #ALERT! you should change this path to where you want the files to be written
    writePath <- paste("/Users/noahfriedman/Desktop/BMI217Project/INTERSECTIONS_WITH", name, ".txt", sep = "")
    write(as.matrix(l), writePath)
  } 
 }
 
 intersect_and_write_lists(geneList2$Gene.symbol, geneLists)
+
 
 
 
