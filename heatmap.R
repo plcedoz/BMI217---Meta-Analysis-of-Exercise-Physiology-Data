@@ -26,14 +26,31 @@ for (study in studies){
 
 split_multiple_gene_names <- function(geneL){
   for(i in 1: length(geneL)){
-    print(geneL[i])
+    if((regexpr('\\///',geneL[i])) != -1){
+      cur_gene <- geneL[i]
+      gene1 <- substr(cur_gene, 1, regexpr('\\///',cur_gene)-1)
+      geneL = c(geneL, gene1)
+      gene2 <- substr(cur_gene, regexpr('\\///',cur_gene) + 3, nchar(cur_gene))
+      if ((regexpr('\\///',gene2)) != -1){
+        cur_gene2 = gene2
+        gene2 <- substr(cur_gene2, 1, regexpr('\\///',cur_gene2)-1)
+        gene3 <- substr(cur_gene2, regexpr('\\///',cur_gene2)+3, nchar(cur_gene2))
+        geneL = c(geneL, gene2)
+        geneL = c(geneL, gene3)
+      }
+      else{
+        geneL = c(geneL, gene2)
+      }
+      geneL = geneL[geneL != cur_gene]
+    }
   }
+  return(geneL)
 }
 
 gene_lists = list()
 for (study in studies){
   gene_lists[[study]] = unique(as.character(datasets[[study]]$Gene.symbol))
-  split_multiple_gene_names(gene_lists[[study]])
+  gene_lists[[study]] = split_multiple_gene_names(gene_lists[[study]])
 }
 
 all_genes = c()
@@ -50,12 +67,11 @@ for (study in studies){
 
 heatmap.2(heatmap_matrix, trace = "none", col = (c("white", "black")))
 most_common_genes = cbind(heatmap_matrix,rowSums(heatmap_matrix))
-most_common_genes = most_common_genes[order(most_common_genes[,11], decreasing = TRUE),]
+most_common_genes = most_common_genes[order(most_common_genes[,9], decreasing = TRUE),]
 
 
 #Clustering: is it possible to find acute vs chronic?
 heatmap_matrix = t(heatmap_matrix)
 dataframes_clusters = kmeans(heatmap_matrix, centers = 2, nstart = 10)
 dataframes_clusters
-
 
