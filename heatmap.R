@@ -31,6 +31,6 @@ for (study in studies){
 }
 
 heatmap.2(heatmap_matrix, trace = "none", col = (c("white", "black")))
-
-
+heatmap_matrix = cbind(heatmap_matrix,rowSums(heatmap_matrix))
+most_common_genes = heatmap_matrix[order(heatmap_matrix[,11], decreasing = TRUE),]
 
