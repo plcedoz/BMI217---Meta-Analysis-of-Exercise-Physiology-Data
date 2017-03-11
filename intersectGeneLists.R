@@ -1,6 +1,10 @@
 #ALERT! change this!! the path to the data on your local system
+<<<<<<< HEAD
 rm(list = ls())
 dataPath <- "Data/"
+=======
+dataPath <- "/Data/"
+>>>>>>> 74573866597cd0d908db8495b2e76bfc537658f6
 
 #paths to gene lists
 #all gene lists are in list format with one gene per line
