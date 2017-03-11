@@ -4,12 +4,32 @@ library(dplyr)
 rm(list = ls())
 
 studies = list.files(path = "gene_lists")
-studies = studies [-16]
-studies = studies [studies != "GSE28422.txt"]
-studies = studies [studies != "GSE34788_2.txt"]
-studies = studies [studies != "GSE58559.txt"]
-studies = studies [studies != "GSE18583.txt"]
-studies = studies [studies != "GSE60655.txt"]
+studies = studies [-length(studies)]
+#studies = studies [studies != "GSE28422.txt"]
+#studies = studies [studies != "GSE34788_2.txt"]
+#studies = studies [studies != "GSE58559.txt"]
+#studies = studies [studies != "GSE18583.txt"]
+#studies = studies [studies != "GSE60655.txt"]
+#studies = studies [studies != "GSE9405_1.txt"]
+#studies = studies [studies != "GSE9405_3.txt"]
+
+
+studies = studies [studies != "GSE28422_2.txt"]
+studies = studies [studies != "GSE28422_3.txt"]
+studies = studies [studies != "GSE28422_4.txt"]
+
+studies = studies [studies != "GSE28998_1.txt"]
+studies = studies [studies != "GSE28998_2.txt"]
+
+studies = studies [studies != "GSE43471_2.txt"]
+studies = studies [studies != "GSE43471_3.txt"]
+studies = studies [studies != "GSE43471_4.txt"]
+studies = studies [studies != "GSE43471_5.txt"]
+studies = studies [studies != "GSE43471_6.txt"]
+
+studies = studies [studies != "GSE58559_2.txt"]
+studies = studies [studies != "GSE58559_3.txt"]
+
 studies = studies [studies != "GSE9405_1.txt"]
 studies = studies [studies != "GSE9405_3.txt"]
 
@@ -67,11 +87,11 @@ for (study in studies){
 
 heatmap.2(heatmap_matrix, trace = "none", col = (c("white", "black")))
 most_common_genes = cbind(heatmap_matrix,rowSums(heatmap_matrix))
-most_common_genes = most_common_genes[order(most_common_genes[,9], decreasing = TRUE),]
+most_common_genes = most_common_genes[order(most_common_genes[,ncol(most_common_genes)], decreasing = TRUE),]
 
 
 #Clustering: is it possible to find acute vs chronic?
 heatmap_matrix = t(heatmap_matrix)
-dataframes_clusters = kmeans(heatmap_matrix, centers = 2, nstart = 10)
+dataframes_clusters = kmeans(heatmap_matrix, centers = 3, nstart = 10)
 dataframes_clusters
 
