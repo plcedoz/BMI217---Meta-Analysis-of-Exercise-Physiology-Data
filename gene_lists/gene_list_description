@@ -4,17 +4,21 @@ GSE9405_1: Control vs endurance\
 GSE9405_2: Control vs strength+endurance\
 GSE9405_3: Control vs strength\
 GSE11761: Acute\
-GSE18583: sk muscle endurance\
+GSE18583: sk muscle endurance heart rate >/< 166 12 samples\
 GSE28422_1: sk muscle strength training (ymale trained)\
 GSE28422_2: sk muscle strength training (ymale untrained)\
 GSE28422_3: sk muscle strength training (yfemale untrained)\
 GSE28422_4: sk muscle strength training (yfemale trained)\
+GSE28422_Female: sk muscle strength training -- trained/untrained 26 samples\
+GSE28422_Male: sk muscle strength training -- trained/untrained 24 samples\
 GSE34788_1 : pre/post exercise\
 GSE34788_2 : ethnicity pre/post\
+GSE34788: pre/post exercise, all ethnicities 60 samples\
 GSE44051: Acute\
 GSE58559_1: adipose combined endurance (hphd diet)\
 GSE58559_2: adipose combined endurance (apmd diet)\
 GSE58559_3: adipose combined endurance (apld diet)\
+GSE58559: adipose combined endurance pre/post diet 85 samples\
 GSE60655\
 GSE68072: athlete vs non athlete}
 GSE43471_1: controlvsdiet_6month
