@@ -14,9 +14,9 @@ studies = studies [studies != "GSE68072.txt"]
 studies = studies [studies != "GSE59088_1.txt"]
 studies = studies [studies != "GSE59088_2.txt"]
 
-for (study in studies){
-  assign(study, read.table(sprintf("gene_lists/%s", study), header = TRUE))
-}
+#for (study in studies){
+#  assign(study, read.table(sprintf("gene_lists/%s", study), header = TRUE))
+#}
 
 datasets = list()
 for (study in studies){
@@ -69,7 +69,7 @@ heatmap.2(heatmap_matrix, trace = "none", col = (c("white", "black")))
 most_common_genes = cbind(heatmap_matrix,rowSums(heatmap_matrix))
 most_common_genes = most_common_genes[order(most_common_genes[,ncol(most_common_genes)], decreasing = TRUE),]
 
-final_gene_list = rownames(most_common_genes[most_common_genes[,ncol(most_common_genes)]>0,])
+final_gene_list = rownames(most_common_genes[most_common_genes[,ncol(most_common_genes)]>2,])
 
 #Clustering: is it possible to find acute vs chronic?
 heatmap_matrix = t(heatmap_matrix)

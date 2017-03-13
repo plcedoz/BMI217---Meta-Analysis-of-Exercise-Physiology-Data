@@ -83,12 +83,12 @@ intersect_and_write_lists <- function(primaryGeneList, listOfLists){
    #we pass primary gene list second because its gene names may be gross
    l <- intersect(curList, primaryGeneList)
    #ALERT! you should change this path to where you want the files to be written
-   writePath <- paste("output_data/intersection_with_", name, ".txt", sep = "")
+   writePath <- paste("output_data/GSE28422_3/intersection_with_", name, ".txt", sep = "")
    write(as.matrix(l), writePath)
  } 
 }
 
-intersect_and_write_lists(gene_lists[3], geneLists)
+intersect_and_write_lists(gene_lists[[3]], geneLists)
 
 
 

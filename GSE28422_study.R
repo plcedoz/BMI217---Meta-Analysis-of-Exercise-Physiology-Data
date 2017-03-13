@@ -61,8 +61,4 @@ most_common_genes = cbind(heatmap_matrix,rowSums(heatmap_matrix))
 most_common_genes = most_common_genes[order(most_common_genes[,ncol(most_common_genes)], decreasing = TRUE),]
 
 
-#Clustering: is it possible to find acute vs chronic?
-heatmap_matrix = t(heatmap_matrix)
-dataframes_clusters = kmeans(heatmap_matrix, centers = 2, nstart = 10)
-dataframes_clusters
 
