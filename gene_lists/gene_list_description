@@ -1,30 +1,26 @@
-GSE1786:\
-GSE8668: Acute\
-GSE9405_1: Control vs endurance\
-GSE9405_2: Control vs strength+endurance\
-GSE9405_3: Control vs strength\
-GSE11761: Acute\
-GSE18583: sk muscle endurance heart rate >/< 166 12 samples\
-GSE28422_acute: sk muscle strength untrained (acute)
-GSE28422_chronic: sk muscle strength trained (chronic)
-GSE34788_1 : pre/post exercise\
-GSE34788_2 : ethnicity pre/post\
-GSE34788: pre/post exercise, all ethnicities 60 samples\
-GSE44051: Acute\
+GSE11761: Acute
+GSE1718: Chronic
+GSE1786: Chronic
+GSE28422_1: Acute
+GSE28422_2: Chronic
+GSE28998:
+GSE34788:
+GSE43471:
+GSE44051:
+GSE58559: adipose combined endurance pre/post diet 85 samples\
+
+GSE68072
+GSE8668
+GSE9405
+
 GSE58559_1: adipose combined endurance (hphd diet)\
 GSE58559_2: adipose combined endurance (apmd diet)\
 GSE58559_3: adipose combined endurance (apld diet)\
-GSE58559: adipose combined endurance pre/post diet 85 samples\
-GSE60655\
-GSE68072: athlete vs non athlete}
-GSE43471_1: controlvsdiet_6month
-GSE43471_2: controlvsdiet(baseline)
-GSE43471_3: controlvsdiet+exercise(6month)
-GSE43471_4: controlvsdiet+exercise(baseline)
-GSE43471_5: controlvsexercise(6month)
-GSE43471_6: controlvsexercise(baseline)
-GSE28998_1: trainedvsuntrained(all)
-GSE28998_2: trainedvsuntrained(female)
-GSE28998_3: trainedvsuntrained(male)
+GSE68072: athlete vs non athlete: REST
 GSE59088_1: beforetrainingVs2.5hrs(control+strength+endurance)
 GSE59088_2: beforetrainingVs5hrs(control+strength+endurance)
+GSE60655??
+
+
+
+
