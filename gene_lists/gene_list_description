@@ -1,23 +1,23 @@
-GSE11761: Acute
-GSE1718: Chronic
-GSE1786: Chronic
-GSE28422_1: Acute
-GSE28422_2: Chronic Post2 vs Post1
-GSE28422_3: Chronic Post2 vs Pre2
-GSE28998:
-GSE34788:
-GSE43471:
-GSE44051:
-GSE58559: adipose combined endurance pre/post diet 85 samples\
-GSE68072
-GSE8668
-GSE9405
+GSE11761: Acute (PBMC's)
+GSE1718: Chronic (skeletal muscle)
+GSE1786: Chronic (vastus lateralis)
+GSE28422_1: Acute (vastus lateralis)
+GSE28422_2: Chronic Post2 vs Post1 (vastus lateralis)
+GSE28422_3: Chronic Post2 vs Pre2 (vastus lateralis)
+GSE28998: chronic post2 vs post1 (trained biceps)
+GSE34788: chronic post2 vs post1 (whole blood)
+GSE43471: chronic (subcutaneous adipose tissue) (diet + exercise for baseline vs 6month)
+GSE44051: acute (myotubes)
+GSE58559: adipose combined endurance pre/post diet 85 samples\ 
+
+GSE8668: acute (neutrophils) 
+GSE9405 chronic (vastus lateralis RNA)
 
 GSE58559_1: adipose combined endurance (hphd diet)\
 GSE58559_2: adipose combined endurance (apmd diet)\
 GSE58559_3: adipose combined endurance (apld diet)\
 GSE68072: athlete vs non athlete: REST
-GSE59088_1: beforetrainingVs2.5hrs(control+strength+endurance)
+GSE59088_1: beforetrainingVs2.5hrs(control+strength+endurance) (human skeletal muscle transcriptome)
 GSE59088_2: beforetrainingVs5hrs(control+strength+endurance)
 GSE60655??
 
