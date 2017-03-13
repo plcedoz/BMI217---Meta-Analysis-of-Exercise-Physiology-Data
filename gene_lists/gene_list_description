@@ -5,8 +5,8 @@ GSE9405_2: Control vs strength+endurance\
 GSE9405_3: Control vs strength\
 GSE11761: Acute\
 GSE18583: sk muscle endurance heart rate >/< 166 12 samples\
-GSE28422_1: sk muscle strength untrained (acute)
-GSE28422_2: sk muscle strength trained (chronic)
+GSE28422_acute: sk muscle strength untrained (acute)
+GSE28422_chronic: sk muscle strength trained (chronic)
 GSE34788_1 : pre/post exercise\
 GSE34788_2 : ethnicity pre/post\
 GSE34788: pre/post exercise, all ethnicities 60 samples\
