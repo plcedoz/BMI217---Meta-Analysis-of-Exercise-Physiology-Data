@@ -4,9 +4,9 @@ library(dplyr)
 rm(list = ls())
 
 studies = list.files(path = "gene_lists")
-studies = studies [-length(studies)]
+studies = studies [studies != "gene_list_description"]
 
-#studies = studies [studies != "GSE28422_3"]
+studies = studies [studies != "GSE28422_3"]
 studies = studies [studies != "GSE58559_1.txt"]
 studies = studies [studies != "GSE58559_2.txt"]
 studies = studies [studies != "GSE58559_3.txt"]

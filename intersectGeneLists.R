@@ -1,5 +1,4 @@
 #ALERT! change this!! the path to the data on your local system
-rm(list = ls())
 dataPath <- "Data/"
 
 #paths to gene lists
@@ -89,7 +88,7 @@ intersect_and_write_lists <- function(primaryGeneList, listOfLists){
  } 
 }
 
-intersect_and_write_lists(final_gene_list, geneLists)
+intersect_and_write_lists(gene_lists[3], geneLists)
 
 
 
