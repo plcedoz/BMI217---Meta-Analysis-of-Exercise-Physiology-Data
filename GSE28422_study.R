@@ -12,7 +12,7 @@ for (study in studies){
 datasets = list()
 for (study in studies){
   datasets[[study]] = read.table(sprintf("gene_lists/%s", study), header = TRUE)
-  datasets[[study]] = filter(datasets[[study]], logFC > 0.5)
+  datasets[[study]] = filter(datasets[[study]], adj.P.Val<0.05)
 }
 
 split_multiple_gene_names <- function(geneL){
@@ -56,9 +56,17 @@ for (study in studies){
   heatmap_matrix[,study] = all_genes %in% gene_lists[[study]]
 }
 
+
 heatmap.2(heatmap_matrix, trace = "none", col = (c("white", "black")))
 most_common_genes = cbind(heatmap_matrix,rowSums(heatmap_matrix))
 most_common_genes = most_common_genes[order(most_common_genes[,ncol(most_common_genes)], decreasing = TRUE),]
+
+
+
+
+
+
+
 
 
 

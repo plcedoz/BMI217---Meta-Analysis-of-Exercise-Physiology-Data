@@ -6,13 +6,17 @@ rm(list =ls())
 
 source("get_data_gse.R")
 
-gse_ref = "GSE8668"
+gse_ref = "GSE28998"
 data_gse = get_data_gse(gse_ref)
 data_matrix = data_gse$data_matrix
 gsm_description = data_gse$gsm_description
 
+#Explore gene BAG3:
+test = data_matrix["BAG3",]
+
+
 #We build the design matrix (case/control) from the gsm_description file
-after_exercise = gsm_description$V3 == "after-exercise"
+after_exercise = gsm_description$V5 == "training status: trained"
 design = model.matrix(~ after_exercise)
 rownames(design) = gsm_description$V1
 fit <- lmFit (data_matrix, design)

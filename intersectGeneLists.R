@@ -69,10 +69,15 @@ clinvar <- as.character(clinvar)
 #ELITE LOF
 elite <- read.csv(elitePath, sep = '\t', header = FALSE)
 
+
+athlete_poster <- read.csv("Data/AlthleteGenes.txt", sep = ',', header = FALSE)
+
+
 #create a matrix of genelists
-geneLists <- list(arvc, brugada, cardiomyopathy, cpvt, dcm, hcm, lds, lqts, lvnc, noonan, clinvar, elite)    
+geneLists <- list(arvc, brugada, cardiomyopathy, cpvt, dcm, hcm, lds, lqts, lvnc, noonan, clinvar, elite, athlete_poster)    
 #create the names for this genelist (make sure they match! EVERYTHING IS RUINED IF THEY DONT MATCH)
-names(geneLists) <- c("arvc", "brugada", "cardiomyopathy", "cpvt", "dcm", "hcm", "lds", "lqts", "lvnc", "noonan", "clinvar", "elite")
+names(geneLists) <- c("arvc", "brugada", "cardiomyopathy", "cpvt", "dcm", "hcm", "lds", "lqts", "lvnc", "noonan", "clinvar", "elite", "athlete_poster")
+
 
 
 #given a primary gene list, interests it with each list on the list of lists and writes a file with the name associated with the file enumerated in the list of lists
@@ -83,12 +88,12 @@ intersect_and_write_lists <- function(primaryGeneList, listOfLists){
    #we pass primary gene list second because its gene names may be gross
    l <- intersect(curList, primaryGeneList)
    #ALERT! you should change this path to where you want the files to be written
-   writePath <- paste("output_data/GSE28422_3/intersection_with_", name, ".txt", sep = "")
+   writePath <- paste("output_data/intersection_with_", name, ".txt", sep = "")
    write(as.matrix(l), writePath)
  } 
 }
 
-intersect_and_write_lists(gene_lists[[3]], geneLists)
+intersect_and_write_lists(final_gene_list, geneLists)
 
 
 
