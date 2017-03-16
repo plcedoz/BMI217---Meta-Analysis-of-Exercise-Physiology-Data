@@ -97,7 +97,9 @@ heatmap_matrix_2[heatmap_matrix_2 == 0] = 1
 heatmap_matrix_2 = log10(heatmap_matrix_2)
 
 #Plot the heatmaps
-heatmap.2(heatmap_matrix_2, trace = "none", col = colorRampPalette(c("black","white"))(100), symbreaks = FALSE)
+colnames(heatmap_matrix_2) = c("GSE1718", "GSE1786", "GSE28422_2", "GSE28422_3", "GSE28998", "GSE34788", "GSE43471", "GSE58559", "GSE9405")
+
+heatmap.2(heatmap_matrix_2, trace = "none", col = colorRampPalette(c("black","white"))(100), symbreaks = FALSE, margins = c(6,4), cexCol = 0.8)
 heatmap.2(heatmap_matrix, trace = "none", col = (c("white", "black")))
 
 #Extract the most recurring genes across the studies
