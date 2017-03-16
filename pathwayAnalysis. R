@@ -1,0 +1,47 @@
+library(ReactomePA)
+library(cluster)
+source("https://bioconductor.org/biocLite.R")
+biocLite("clusterProfiler")
+library(clusterProfiler)
+
+
+geneData = read.table("/Users/Sandeep/Documents/BMI217---Meta-Analysis-of-Exercise-Physiology-Data/gene_lists/GSE11761.txt", header = T)
+
+genes = all_genes
+geneEntrez = bitr(genes, fromType = "SYMBOL", toType = "ENTREZID", OrgDb = "org.Hs.eg.db")
+head(geneEntrez)
+
+de = geneEntrez$ENTREZID
+
+x = enrichPathway(gene=de, pvalueCutoff = 0.05, readable = T)
+head(as.data.frame(x))
+barplot(x, showCategory = 8)
+dotplot(x,  showCategory = 15)
+enrichMap(x, layout=igraph::layout.kamada.kawai, vertex.label.cex = 1,vertex.label.font = 1, n = 25)
+cnetplot(x, categorySize="pvalue", foldChange=gene_lists)
+
+count = 0
+entrezGeneLists = list()
+for (genes in studies){
+  print(count)
+  #print(genes)
+  if (length(gene_lists[[genes]]) == 0){
+    next
+  }
+  else{
+    newGene = bitr(gene_lists[[genes]],fromType = "SYMBOL", toType = "ENTREZID", OrgDb = "org.Hs.eg.db" )
+    entrezGeneLists[[genes]] = newGene$ENTREZID
+    count = count + 1
+  }
+}
+
+names(entrezGeneLists) = c("vastus lateralis1", "vastus lateralis2","vastus lateralis3","trained biceps","adipose tissue", "vastus lateralis4")
+res <- compareCluster(entrezGeneLists, fun="enrichPathway")
+plot(res)
+
+
+
+
+
+
+
