@@ -1,3 +1,6 @@
+#This is a script to read all chronic studies and plot a heatmap of all significant genes (adj.P.Val<0.05) across all studies
+
+
 library(gplots)
 library(dplyr)
 

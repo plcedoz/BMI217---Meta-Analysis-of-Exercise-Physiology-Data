@@ -80,8 +80,6 @@ geneLists <- list(arvc, brugada, cardiomyopathy, cpvt, dcm, hcm, lds, lqts, lvnc
 #create the names for this genelist (make sure they match! EVERYTHING IS RUINED IF THEY DONT MATCH)
 names(geneLists) <- c("arvc", "brugada", "cardiomyopathy", "cpvt", "dcm", "hcm", "lds", "lqts", "lvnc", "noonan", "clinvar", "elite", "athlete_poster")
 
-
-
 #given a primary gene list, intersects it with each list on the list of lists and writes a file with the name associated with the file enumerated in the list of lists
 intersect_and_write_lists <- function(primaryGeneList, listOfLists){
  for(i in 1:length(listOfLists)){
