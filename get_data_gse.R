@@ -1,3 +1,5 @@
+#This function allows to extract the sample description and the gene expression data from a study on GEO
+
 library(GEOquery)
 
 get_data_gse <- function (gse_ref){

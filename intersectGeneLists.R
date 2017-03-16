@@ -1,4 +1,6 @@
-#ALERT! change this!! the path to the data on your local system
+#This is a function to intersect our computed gene lists with external gene lists of interest: ELITE, HCM, LQTS and other
+#cardiovascular diseases
+
 dataPath <- "Data/"
 
 #paths to gene lists
@@ -80,7 +82,7 @@ names(geneLists) <- c("arvc", "brugada", "cardiomyopathy", "cpvt", "dcm", "hcm",
 
 
 
-#given a primary gene list, interests it with each list on the list of lists and writes a file with the name associated with the file enumerated in the list of lists
+#given a primary gene list, intersects it with each list on the list of lists and writes a file with the name associated with the file enumerated in the list of lists
 intersect_and_write_lists <- function(primaryGeneList, listOfLists){
  for(i in 1:length(listOfLists)){
    name <- names(listOfLists)[i]
